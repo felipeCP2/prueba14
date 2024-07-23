@@ -1,0 +1,1095 @@
+/*Break point de media queries:
+
+1155px
+1000px
+950px 
+850px
+750px
+700px
+600px
+500px
+450px
+350px
+*/
+
+/*Main______________________________________________________________________________________________*/
+/*________________________________________________________________________________________________________________________*/
+main {
+  padding: 3rem 0 3rem 0;
+  height: fit-content;
+  background-color: rgba(51, 179, 179, 0);
+}
+
+.contenedor-main {
+  margin: 4rem auto 0 auto;
+  overflow: hidden;
+  /*background-image: url(index-img/justicia-sombras.svg);*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: 20%;*/
+  /*background-position-x: center;*/
+  /*background-position-y: center;*/
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .contenedor-main {
+    flex-direction: column;
+  }
+}
+
+.main-div {
+  width: 50%;
+  background-color: rgba(0, 255, 255, 0);
+}
+
+@media (max-width: 1000px) {
+  .main-div {
+    width: 90%;
+  }
+}
+
+/*Sub contenedor main 1-----------------------------------------------*/
+
+.main-div:nth-child(1) {
+  background-color: rgba(0, 255, 255, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+.logo-principal {
+  height: 12rem;
+}
+
+@media (max-width: 500px) {
+  .logo-principal {
+    height: auto;
+    width: 100%;
+  }
+}
+
+h1 {
+  background-color: rgba(0, 255, 255, 0);
+  margin: 1rem 0 0 0;
+  padding: 0 0 0 2rem;
+  font-weight: 600;
+  display: none;
+}
+
+.main-div:nth-child(1) p {
+  hyphens: auto;
+  justify-content: center;
+  padding: 2rem;
+  line-height: 3rem;
+  background-color: rgba(240, 255, 255, 0);
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  .main-div:nth-child(1) p {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .main-div:nth-child(1) p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+
+/*tarjeta de presentacion. . . . . . . . . . . . . . . . . . . . . .*/
+
+.tarjeta-de-presentacion {
+  background-color: rgba(0, 255, 255, 0);
+  filter: grayscale(0%);
+}
+
+.tarjeta-de-presentacion:hover {
+  filter: grayscale(0%);
+  transition: 0.6s;
+}
+
+.sub-tarjeta-presentacion {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  background-color: rgba(127, 255, 212, 0);
+  padding-left: 2.5rem;
+}
+
+.nombre-perfil span {
+  display: block;
+  width: fit-content;
+  background-color: rgba(127, 255, 212, 0);
+  position: relative;
+}
+
+.nombre-perfil h2 {
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  .nombre-perfil h2 {
+    font-size: 1.6rem;
+  }
+}
+
+.foto-perfil {
+  height: 7rem;
+  width: 7rem;
+  background-color: white;
+  border: solid black 0.25rem;
+  border-radius: 100%;
+  background-image: url(index-img/foto-perfil-1.webp);
+  background-size: 100%;
+}
+
+.nombre-perfil span:nth-child(1) {
+  background-color: rgba(255, 235, 205, 0);
+  border-bottom: 0.25rem black solid;
+  padding-left: 2rem;
+}
+
+.nombre-perfil span:nth-child(2) {
+  background-color: rgba(240, 188, 111, 0);
+  padding-left: 2rem;
+}
+
+.conjunto-iconos-contacto {
+  width: fit-content;
+  position: relative;
+  left: 40%;
+  background-color: rgba(255, 127, 80, 0);
+  display: flex;
+  gap: 2rem;
+}
+
+.icono-contacto {
+  height: 3.5rem;
+}
+
+.icono-contacto:hover {
+  transform: scale(1.2);
+  transition: 0.6s;
+  filter: saturate(170%);
+}
+
+/*Sub contenedor main 2-----------------------------------------------*/
+.main-div:nth-child(2) {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  background-color: rgba(0, 255, 255, 0);
+}
+
+@media (max-width: 1000px) {
+  .main-div:nth-child(2) {
+    margin: 4rem;
+  }
+}
+
+/*Slider . . . . . . . . . . . . . . . . .*/
+
+.slider-frame {
+  height: 30rem;
+  width: 50rem;
+  overflow: hidden;
+  filter: grayscale(80%);
+  transition: 0.6s;
+  border-radius: 10px;
+}
+
+@media (max-width: 1155px) {
+  .slider-frame {
+    height: 30rem;
+    width: 42rem;
+    background-color: rgba(0, 255, 255, 0.308);
+  }
+}
+
+@media (max-width: 1000px) {
+  .slider-frame {
+    width: 70vw;
+    height: 40vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider-frame {
+    width: 70vw;
+    height: 70vw;
+  }
+}
+
+.slider-frame:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.slider-frame ul {
+  display: flex;
+  padding: 0;
+  width: 800%;
+  animation: slide 90s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+  list-style: none;
+  width: 100%;
+  background-color: aqua;
+  position: relative;
+}
+
+.slider-frame p {
+  position: absolute;
+  font-weight: 500;
+  padding: 2rem;
+  color: white;
+  text-shadow: 0.1rem 0.1rem 0.5rem black;
+  font-size: 2.5rem;
+}
+
+.div-slider {
+  height: 30rem;
+  width: 50rem;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1155px) {
+  .div-slider {
+    height: 30rem;
+    width: 42rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .div-slider {
+    width: 70vw;
+    height: 40vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .div-slider {
+    width: 70vw;
+    height: 70vw;
+  }
+}
+
+.item-slider1 {
+  background-image: url(index-img/cesar.webp);
+  background-size: 100%;
+}
+
+.item-slider2 {
+  background-image: url(index-img/familia-en-la-playa.webp);
+  background-size: 100%;
+}
+
+@media (max-width: 1155px) {
+  .item-slider2 {
+    background-size: 110%;
+  }
+}
+
+.item-slider3 {
+  background-image: url(index-img/trabajador-pastizal.webp);
+  background-size: 100%;
+}
+
+@media (max-width: 1155px) {
+  .item-slider3 {
+    background-size: 110%;
+  }
+}
+
+.item-slider4 {
+  background-image: url(index-img/comerciante-rio.webp);
+  background-size: 100%;
+}
+
+.item-slider5 {
+  background-image: url(index-img/consumidor.webp);
+  background-size: 110%;
+}
+
+.item-slider6 {
+  background-image: url(index-img/preso.webp);
+  background-size: 110%;
+}
+
+@media (max-width: 1155px) {
+  .item-slider6 {
+    background-size: 127%;
+  }
+}
+
+.item-slider7 {
+  background-image: url(index-img/corte-suprema1.webp);
+  background-size: 100%;
+}
+
+@media (max-width: 1155px) {
+  .item-slider7 {
+    background-size: 110%;
+  }
+}
+
+.item-slider8 {
+  background-image: url(index-img/monedas.webp);
+  background-size: 100%;
+}
+
+@media (max-width: 1155px) {
+  .item-slider8 {
+    background-size: 110%;
+  }
+}
+
+@keyframes slide {
+  0% {
+    margin-left: 0%;
+  }
+  11% {
+    margin-left: 0%;
+  }
+
+  12.5% {
+    margin-left: -100%;
+  }
+  23.5% {
+    margin-left: -100%;
+  }
+  25% {
+    margin-left: -200%;
+  }
+
+  36% {
+    margin-left: -200%;
+  }
+
+  37.5% {
+    margin-left: -300%;
+  }
+
+  48.5% {
+    margin-left: -300%;
+  }
+
+  50% {
+    margin-left: -400%;
+  }
+
+  61% {
+    margin-left: -400%;
+  }
+
+  62.5% {
+    margin-left: -500%;
+  }
+
+  73.5% {
+    margin-left: -500%;
+  }
+
+  75% {
+    margin-left: -600%;
+  }
+
+  86% {
+    margin-left: -600%;
+  }
+
+  87.5% {
+    margin-left: -700%;
+  }
+  100% {
+    margin-left: -700%;
+  }
+
+  /*
+  0% {
+    margin-left: 0%;
+  }
+  20% {
+    margin-left: 0%;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  95% {
+    margin-left: -300%;
+  }*/
+}
+
+/*SECCION ÁREAS DE EJERCICIO______________________________________________________________________________________________*/
+/*________________________________________________________________________________________________________________________*/
+
+.subcontenedor-areas-ejercicio {
+  margin-top: 2rem;
+  margin: 0 auto 0 auto;
+  /*display: flex;
+  gap: 2rem;*/
+  background-color: rgba(194, 134, 55, 0);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+@media (max-width: 700px) {
+  .subcontenedor-areas-ejercicio {
+    display: block;
+  }
+}
+
+/*Lista areas de ejercicio--------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+.lista-areas-de-ejercicio {
+  height: fit-content;
+  width: fit-content;
+  /*float: left;*/
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: var(--sombras-contenedores);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 0.7rem;
+}
+
+.lista-areas-de-ejercicio ion-icon {
+  font-size: 1.6rem;
+}
+
+.lista-areas-de-ejercicio li {
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 10px;
+  background-color: rgba(167, 167, 167, 0.384);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lista-areas-de-ejercicio li:hover {
+  background-color: rgba(190, 219, 245, 0.397);
+  cursor: pointer;
+  transform: scale(1.04);
+  transition: 0.2s;
+}
+
+.lista-areas-de-ejercicio li:active {
+  filter: invert(100);
+  background-color: rgba(181, 133, 70, 0);
+}
+
+@media (max-width: 700px) {
+  .lista-areas-de-ejercicio {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 black;
+    margin-bottom: 3rem;
+  }
+
+  .lista-areas-de-ejercicio li {
+    background-color: white;
+    box-shadow: var(--sombras-contenedores);
+  }
+
+  .lista-areas-de-ejercicio li span:nth-child(1) {
+    display: none;
+  }
+}
+
+/*contactanos-servicios. . . . . . . . . */
+
+.contactanos-servicios {
+  height: fit-content;
+  background-color: rgb(0, 0, 0);
+  background-size: 100%;
+  filter: sepia(100%);
+  margin: 2rem;
+  padding: 1rem 1rem 7rem 1rem;
+  display: relative;
+}
+
+@media (max-width: 700px) {
+  .contactanos-servicios {
+    display: none;
+  }
+}
+
+.contactanos-servicios p {
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 0.1rem 0.1rem 10rem black;
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+@media (max-width: 950px) {
+  .contactanos-servicios p {
+    font-size: 1.6rem;
+  }
+}
+
+.img-telefono-antiguo {
+  height: auto;
+  width: 20rem;
+  margin: 0 auto 0 auto;
+  position: absolute;
+}
+
+@media (max-width: 950px) {
+  .img-telefono-antiguo {
+    width: 15rem;
+  }
+}
+
+.link-contactanos-servicios {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.683);
+  width: fit-content;
+  padding: 1rem;
+  margin: 0 auto 0 auto;
+  font-weight: 900;
+  border-radius: 10px;
+}
+
+/*contenedor explicaciones----------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+.contenedor-explicaciones {
+  background-color: rgba(0, 0, 255, 0);
+  margin: 2rem;
+}
+
+@media (max-width: 500px) {
+  .contenedor-explicaciones {
+    margin: 0;
+  }
+}
+
+.contenedor-encabezado-servicios {
+  height: fit-content;
+  min-height: 34rem;
+  max-width: 100rem;
+  margin: 0 auto 0 auto;
+  font-size: 2rem;
+}
+
+@media (max-width: 850px) {
+  .contenedor-encabezado-servicios {
+    font-size: 1.6rem;
+  }
+}
+
+/*Textos y párrafos . . . . . . . . . */
+.contenedor-explicaciones h3 {
+  margin-bottom: 1.5rem;
+}
+
+.contenedor-explicaciones p {
+  text-align: justify;
+  hyphens: auto;
+  text-indent: 5rem;
+  margin-bottom: 2rem;
+}
+
+.contenedor-explicaciones ul {
+  list-style: circle;
+}
+
+.contenedor-explicaciones li {
+}
+
+/*imágenes . . . . . . . . . . . . . . */
+.img-areas-de-ejercicio {
+  float: right;
+  height: auto;
+  width: 25rem;
+  padding: 0 2rem 2rem 2rem;
+}
+
+@media (max-width: 800px) {
+  .img-areas-de-ejercicio {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .img-areas-de-ejercicio {
+    float: none;
+    margin: 0 auto 0 auto;
+  }
+}
+
+.img-opcion-escritorio {
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+@media (max-width: 500px) {
+  .img-opcion-escritorio {
+    display: none;
+  }
+}
+
+.img-opcion-movil {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .img-opcion-movil {
+    display: block;
+  }
+}
+/*Acordeon. . . . . . . . . . . . . . . . . . . . . .*/
+
+.contenedor-acordeon {
+  border: rgba(0, 0, 0, 0) solid 0.1rem;
+  margin-top: 2rem;
+  background-color: rgba(0, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.557);
+  position: relative;
+}
+
+.contenedor-acordeon p {
+  text-indent: 0;
+}
+
+@media (max-width: 350px) {
+  .contenedor-acordeon p {
+    font-size: 1.3rem;
+  }
+}
+
+.contenedor-acordeon li:nth-child(1) {
+  cursor: pointer;
+}
+
+.titular-acordeon {
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border-top: black solid 0.15rem;
+  border-bottom: black solid 0.15rem;
+  background-color: rgba(0, 0, 0, 0.185);
+  font-weight: 800;
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 350px) {
+  .titular-acordeon {
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    border-top: black solid 0.15rem;
+    border-bottom: black solid 0.15rem;
+    background-color: rgba(0, 0, 0, 0.185);
+    font-weight: 800;
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+
+.contenido-acordeon {
+  height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 350px) {
+  .contenido-acordeon {
+    font-size: 1.3rem;
+  }
+}
+
+/*transformaciones . . . . */
+
+.despliegue-acordeon {
+  height: auto;
+  padding: 2rem 4rem 2rem 4rem;
+}
+
+@media (max-width: 350px) {
+  .despliegue-acordeon {
+    height: auto;
+    padding: 1rem 1rem 1rem 2rem;
+  }
+}
+
+.rotacion-flecha {
+  transform: rotate(180deg);
+}
+
+/*
+o
+o
+o
+o
+o
+*/
+
+/*Contenedor interno explicaciones........................*/
+.contenedor-interno-explicaciones {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 3fr 2fr;
+  background-color: rgba(255, 60, 0, 0.445);
+  padding: 1rem;
+}
+
+/*subdivisiones de contenedor interno explicaciones . . . */
+.contenedor-interno-explicaciones div:nth-child(1) {
+  background-color: rgba(122, 122, 248, 0.432);
+  width: 100%;
+}
+
+.contenedor-interno-explicaciones div:nth-child(2) {
+  background-color: rgba(21, 129, 66, 0.301);
+  width: 80%;
+}
+
+/* Texto explicaciones. . . . . . . . . . . . . . . . . . */
+
+.span-negrita {
+  font-weight: 800;
+}
+
+/* Imagen explicaciones. . . . . . . . . . . . . . . . . . */
+
+.alma-civil .img-areas-de-ejercicio {
+}
+.alma-familia .img-areas-de-ejercicio {
+}
+.alma-laboral .img-areas-de-ejercicio {
+}
+.alma-comercial .img-areas-de-ejercicio {
+}
+.alma-consumidor .img-areas-de-ejercicio {
+}
+.alma-penal .img-areas-de-ejercicio {
+}
+.alma-constitucional .img-areas-de-ejercicio {
+}
+.alma-concursal .img-areas-de-ejercicio {
+}
+
+/*App de areas de ejercicio...........................*/
+.alma-civil,
+.alma-familia,
+.alma-laboral,
+.alma-comercial,
+.alma-consumidor,
+.alma-penal,
+.alma-constitucional,
+.alma-concursal {
+  display: none;
+}
+
+.cuerpo {
+  display: contents;
+  position: absolute;
+  left: 0;
+}
+/*tienes dudas - contáctanos...........................*/
+.tienes-dudas-contactanos {
+  width: fit-content;
+  padding: 2rem;
+  font-size: 2.2rem;
+  background-color: rgba(145, 145, 145, 0.159);
+  color: white;
+  text-shadow: 0.1rem 0.1rem 0.7rem black;
+}
+
+.tienes-dudas-contactanos p {
+  padding-bottom: 1rem;
+  background-color: rgba(250, 235, 215, 0);
+  width: fit-content;
+  margin: 0 auto 0 auto;
+  font-weight: 700;
+}
+
+.tienes-dudas-contactanos a {
+  background-color: var(--azul-oscuro);
+  display: block;
+  width: fit-content;
+  margin: 0 auto 0 auto;
+  padding: 1rem;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  box-shadow: 0.3rem 0.3rem 0.1rem black;
+}
+
+.tienes-dudas-contactanos a:hover {
+  transform: scale(1.2);
+  transform: translateX(-0.5rem);
+  box-shadow: 0.8rem 0.8rem 0.3rem rgba(0, 0, 0, 0.523);
+  transition: 0.6s;
+}
+
+.tienes-dudas-contactanos a:active {
+  box-shadow: 0 0 0 black;
+  transform: translateX(0);
+  transition: 0.3s;
+}
+
+/*SECCION EVALUACIONES Y REFERENCIAS______________________________________________________________________________________________*/
+/*________________________________________________________________________________________________________________________*/
+
+/*..................................................................................*/
+.carrousel {
+  margin: 0 auto 0 auto;
+  width: 80%;
+  padding: 0.5rem;
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  overflow: hidden;
+  background-color: rgba(44, 231, 231, 0);
+}
+
+@media (max-width: 750px) {
+  .carrousel {
+    width: 100%;
+  }
+}
+
+.grande {
+  width: 300%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  transition: all 0.5s ease;
+  transform: translateX(0%);
+  background-color: rgba(255, 68, 0, 0);
+  position: relative;
+}
+
+.sub {
+  height: fit-content;
+  width: calc(100% / 2 - 2em);
+  margin: 2rem;
+  padding: 2rem;
+  min-height: 10vh;
+  color: var(--negro);
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.315);
+  background-color: rgb(255, 255, 255);
+}
+
+.sub:nth-child(1) {
+}
+
+.sub:nth-child(2) {
+  height: stretch;
+}
+
+.sub:nth-child(3) {
+  height: stretch;
+}
+
+@media (max-width: 590px) {
+}
+
+.sub li:nth-child(1) {
+  font-weight: 900;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid black;
+}
+
+@media (max-width: 590px) {
+  .sub:nth-child(1),
+  .sub:nth-child(2) {
+    height: fit-content;
+  }
+}
+
+.estrellas-evaluaciones {
+  height: 1.6rem;
+}
+
+.sub li:nth-child(2) {
+  font-weight: 900;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub:nth-child(1) {
+}
+.sub:nth-child(2) {
+}
+.sub:nth-child(3) {
+}
+.sub:nth-child(4) {
+}
+
+.carrousel .puntos {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(46, 46, 192, 0);
+}
+
+.carrousel .punto {
+  width: 2rem;
+  height: 2rem;
+  margin: 2rem;
+  font-size: 1.5rem;
+  transition: all 0.4s ease;
+  border: solid rgba(0, 0, 0, 0) 1px;
+  border-radius: 100%;
+  background-color: rgba(122, 119, 119, 0.247);
+  text-align: center;
+  box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.411);
+  color: rgba(0, 0, 0, 0.24);
+}
+
+.punto.activo {
+  background-color: white;
+}
+
+.sección-evaluaciones-de-clientes p {
+  width: fit-content;
+  margin: 0 auto 0 auto;
+  padding: 0;
+  text-indent: 0;
+}
+
+.sección-evaluaciones-de-clientes a:link {
+  background-color: var(--gris-rojizo);
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: white;
+}
+.sección-evaluaciones-de-clientes a:visited {
+  color: white;
+}
+.sección-evaluaciones-de-clientes a:hover {
+}
+.sección-evaluaciones-de-clientes a:active {
+}
+
+/*SECCION CONTÁCTANOS______________________________________________________________________________________________*/
+/*________________________________________________________________________________________________________________________*/
+.contenedor-contactanos {
+  display: flex;
+  background-color: rgba(0, 255, 255, 0);
+}
+@media (max-width: 950px) {
+  .contenedor-contactanos {
+    flex-direction: column;
+  }
+}
+
+/*Datos de contacto...............................................*/
+
+.subcontenedor-contactanos:nth-child(1) {
+  padding: 2rem;
+  line-height: 3rem;
+  hyphens: auto;
+  font-size: 2rem;
+}
+
+@media (max-width: 550px) {
+  .subcontenedor-contactanos:nth-child(1) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+
+.contenedor-datos-de-contacto {
+  margin-top: 2rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 255, 255, 0);
+  gap: 1rem;
+}
+
+.contenedor-datos-de-contacto a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/*formulario...............................................*/
+
+.subcontenedor-contactanos:nth-child(2) {
+  width: 150%;
+  color: white;
+  background-color: var(--azul-oscuro);
+  border-radius: 10px;
+  background-color: var(--azul-oscuro);
+  padding: 2rem;
+  color: rgb(214, 207, 207);
+}
+
+@media (max-width: 950px) {
+  .subcontenedor-contactanos:nth-child(2) {
+    width: 70%;
+    margin: 0 auto 0 auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .subcontenedor-contactanos:nth-child(2) {
+    width: 100%;
+    margin: 0 auto 0 auto;
+  }
+}
+
+.logo-formulario {
+  height: 5rem;
+  width: fit-content;
+  margin-bottom: 1rem;
+  background-color: rgba(0, 255, 255, 0);
+  display: block;
+}
+label,
+input,
+textarea,
+select,
+button {
+  display: block;
+  width: 80%;
+  margin: 0 auto 0 auto;
+}
+
+input,
+textarea,
+select {
+  margin-bottom: 0.5rem;
+}
+
+textarea {
+  height: 15rem;
+}
+
+button {
+  width: fit-content;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}

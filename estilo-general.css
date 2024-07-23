@@ -1,0 +1,440 @@
+/*AJUSTES INICIALES______________________________________________________________________________________________*/
+/*_______________________________________________________________________________________________________________*/
+html {
+  font-size: 62.5%;
+  --gris-de-fondo: rgb(234, 232, 232);
+  --gris-rojizo: rgb(104, 99, 99);
+  --gris-intermedio: rgb(183, 178, 178);
+  --sombras-contenedores: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.315);
+  --rojo-vino: rgb(142, 0, 1);
+  --azul-oscuro: rgb(21, 96, 130);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 1.6rem;
+  background-color: var(--gris-de-fondo);
+  font-family: "Lato", sans-serif;
+  /*overflow-x: scroll; hidden;*/
+}
+
+/*CONTENEDOR GENERAL ____________________________________________________________________________________________*/
+/*_______________________________________________________________________________________________________________*/
+
+.contenedor-general {
+  width: 1460px;
+  margin: 0 auto 0 auto;
+  background-color: rgba(0, 255, 255, 0);
+  animation-name: margenIzquierda;
+  animation-duration: 1s;
+}
+
+@media (max-width: 1460px) {
+  .contenedor-general {
+    width: 100%;
+  }
+}
+
+/*Contenedores estandar__________________________________________________________________________________________*/
+/*_______________________________________________________________________________________________________________*/
+
+/*DEFINICIONES: usamos 3 tipos de contenedores: 
+- Megacontenedor: contenedor más grande. 
+- supracontenedores: que son los más generales, de 1° nivel
+- contenedores: que son intermedios o de 2° nivel
+- subcontenedores: que son subdivisiones de 3° nivel
+- Items: que son elementos dentro de contenedores.*/
+
+.supracontenedor-estandar-1 {
+  height: fit-content;
+  width: 90%;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto 2rem auto;
+  box-shadow: var(--sombras-contenedores);
+  /*animación
+  animation-name: margenIzquierda;
+  animation-duration: 1s;*/
+}
+
+.supracontenedor-estandar-2 {
+  height: fit-content;
+  width: 90%;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 0 auto 2rem auto;
+  background-color: rgba(115, 202, 173, 0);
+
+  /*animación
+  animation-name: margenIzquierda;
+  animation-duration: 1s;*/
+}
+
+@media (max-width: 350px) {
+  .supracontenedor-estandar-2 {
+    padding: 0.5rem;
+  }
+}
+
+.supracontenedor-estandar-3 {
+  margin: 0 auto 2rem auto;
+  background-color: rgb(242, 241, 241);
+  width: 90%;
+  padding: 1rem;
+  display: flex;
+  gap: 5rem;
+  justify-content: space-around;
+  border-radius: 10px;
+  /*animación
+  animation-name: margenIzquierda;
+  animation-duration: 1s;*/
+  font-size: 1.2rem;
+  box-shadow: var(--sombras-contenedores);
+}
+
+/*animación contenedor main. . . . . . . . . . . */
+@keyframes margenIzquierda {
+  0% {
+    margin-left: 100%;
+  }
+
+  100% {
+    margin-left: 0%;
+  }
+}
+
+/*TITULARES GENERALES____________________________________________________________________________________________*/
+/*_______________________________________________________________________________________________________________*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+/*Otros ajustes generales y por defecto. . . . . . .  . . . . . */
+
+ul {
+  list-style: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: unset;
+}
+
+ion-icon {
+  font-size: 2rem;
+}
+
+img {
+  height: 5rem;
+  width: auto;
+}
+/*HEADER_________________________________________________________________________________________________________*/
+/*_______________________________________________________________________________________________________________*/
+
+header {
+  padding: 1rem 0 1rem 0;
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 2rem;
+}
+
+header a:link {
+  display: inline-block;
+  padding: 0 1rem 0 1rem;
+  border-radius: 5px;
+}
+header a:hover {
+  background-color: rgb(133, 95, 14);
+  filter: invert(100%);
+  transition: 0.3s;
+}
+
+/*Lista Nav principal.............................................*/
+
+.lista-nav-principal {
+  margin: 0 3rem 0 3rem;
+  display: flex;
+  gap: 3rem;
+}
+
+.logo-simple {
+  height: 1.6rem;
+  margin-right: 0.5rem;
+}
+
+.item-contactanos-movil {
+  display: none;
+}
+
+.item-contactanos-desk {
+  margin-left: auto;
+}
+
+@media (max-width: 750px) {
+  .item-contactanos-movil {
+    display: block;
+    margin-left: auto;
+  }
+
+  .item-contactanos-desk {
+    display: none;
+  }
+}
+
+@media (max-width: 370px) {
+  .item-contactanos-movil {
+    display: none;
+  }
+}
+
+/*Lista Nav movil.............................................*/
+
+.item-lista-nav-movil {
+  position: relative;
+}
+
+@media (max-width: 370px) {
+  .item-lista-nav-movil {
+    margin-left: auto;
+  }
+}
+
+.lista-nav-movil {
+  margin: 0 3rem 0 3rem;
+  display: flex;
+  gap: 3rem;
+}
+
+.boton-menu-movil {
+  display: none;
+}
+
+.boton-cruz-movil {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .lista-nav-movil {
+    position: absolute;
+    top: 5rem;
+    right: -25rem;
+    background-color: rgba(255, 255, 255, 0.925);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    color: black;
+    border: black 0.1rem solid;
+    box-shadow: var(--sombras-contenedores);
+    transition: 0.8s;
+  }
+
+  .despliegue-lista-nav-movil {
+    right: -5rem;
+  }
+
+  .boton-menu-movil {
+    display: contents;
+  }
+
+  .boton-cruz-movil {
+    display: block;
+    background-color: blue;
+    margin-left: auto;
+  }
+
+  .lista-nav-movil li {
+    background-color: rgba(0, 255, 255, 0);
+  }
+}
+
+/*SECCIONES______________________________________________________________________________________________________*/ /*_______________________________________________________________________________________________________________*/
+section {
+  height: fit-content;
+  padding-top: 2.5rem;
+  background-color: rgba(0, 255, 255, 0);
+}
+
+section h2 {
+  margin-bottom: 1.6rem;
+}
+
+/*FOOTER_________________________________________________________________________________________________________*/
+/*_______________________________________________________________________________________________________________*/
+
+footer {
+  width: 100%;
+  background-color: var(--azul-oscuro);
+  height: fit-content;
+  padding: 2rem 2rem 5rem 2rem;
+  position: relative;
+}
+
+.logo-footer {
+  height: 8rem;
+  background-color: rgba(0, 255, 255, 0);
+  width: fit-content;
+  fill: white;
+}
+
+@media (max-width: 350px) {
+  .logo-footer {
+    height: auto;
+    width: 80vw;
+    margin: 0 auto 0 auto;
+  }
+}
+
+.contenedor-footer {
+  color: rgb(200, 208, 214);
+  display: flex;
+  gap: 3rem;
+}
+
+@media (max-width: 610px) {
+  .contenedor-footer {
+    display: block;
+  }
+}
+
+footer a:link,
+footer a:visited {
+  color: white;
+}
+table {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+th {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+td {
+  margin-bottom: 1rem;
+  padding-left: 3rem;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 400px) {
+  th {
+    font-size: 1.3rem;
+  }
+
+  td {
+    padding-left: 0.5rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 300px) {
+  th {
+    font-size: 1rem;
+  }
+
+  td {
+    padding-left: 0;
+    font-size: 1rem;
+  }
+}
+
+.sub-contenedor-footer {
+  margin-top: 2rem;
+}
+
+.copi-right {
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.copi-right p {
+  padding: 0;
+  margin: 0 auto 0 auto;
+  height: fit-content;
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(240, 248, 255, 0.561);
+  font-size: 1.2rem;
+}
+
+.a-formulario-clientes:link,
+.a-formulario-clientes:visited {
+  color: rgb(232, 207, 168);
+  border-radius: 5px;
+  padding: 0 1rem 0 1rem;
+  display: block;
+}
+
+@media (max-width: 415px) {
+  .copi-right p {
+    font-size: 1rem;
+  }
+}
+
+.img-logo-footer {
+  height: 6rem;
+}
+
+.lista-de-accesorios h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+}
+.lista-de-accesorios ul {
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.lista-de-accesorios ul a {
+  color: rgb(200, 208, 214);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/*Link wsp . . . . . . . . . . . . . . . . . . .*/
+.link-wsp-flotante {
+  height: 6rem;
+  width: 6rem;
+  margin: 0;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 100%;
+  display: inline;
+}
+
+.img-wsp-flotante {
+  height: 6rem;
+}
